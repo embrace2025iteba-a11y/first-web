@@ -1,0 +1,615 @@
+/* style.css */
+
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d6eaff; /* biru pastel muda */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container ditengah & rapi */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background: #e0f4ff; /* biru pastel lembut */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Gambar kiri */
+.image-section img {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid pink;
+}
+
+.lock-section {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#pin {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+  padding: 5px;
+  width: 120px;
+  border-radius: 10px;
+  border: 2px solid #88bde6; /* biru pastel */
+  background-color: #ffffff;
+}
+
+/* Keypad */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 10px;
+}
+
+.keypad button {
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #88c9f9; /* biru pastel */
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.keypad button:hover {
+  background: #5aaee8; /* biru sedikit lebih gelap */
+}
+
+/* Pesan PIN benar/salah */
+#message {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Style khusus untuk birthday.html tetap sama */
+body.birthday-page {
+  background: #e6f0ff; /* biru muda pastel */
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 20px;
+  color: #000000;
+}
+
+/* ... sisa CSS birthday.html tetap ... */
+
+
+header h1 {
+  color: #0047ab; /* biru tegas */
+  font-size: 2.5em;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #336699;
+  margin-bottom: 20px;
+}
+
+.banner {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 15px;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.banner img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.banner-text h2 {
+  margin: 15px 0 10px;
+  color: #00509e;
+}
+
+.banner-text p {
+  color: #003366;
+  font-size: 16px;
+}
+
+nav {
+  margin: 0px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav button {
+  background: #3399ff; /* tombol biru */
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+nav button:hover {
+  background: #2673cc;
+}
+
+.section {
+  max-width: 600px;
+  margin: 0 auto 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background: #f0f7ff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+#countdown {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0047ab;
+  margin-top: 10px;
+}
+
+footer {
+  margin-top: 30px;
+}
+
+footer button {
+  background: #666;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background: #333;
+}
+
+.banner-container {
+  position: relative; /* supaya emoji absolute stay di dalam */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #30c5fb;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.banner-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.banner-text {
+  text-align: center;
+  max-width: 600px;
+}
+
+.interactive-section {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Header dengan flex supaya text dan tombol musik sejajar */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #e0f0ff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #0047ab;
+}
+
+.header-left p {
+  margin: 0;
+  font-size: 14px;
+  color: #336699;
+}
+
+/* Tombol musik di header */
+#music-toggle {
+  position: static; /* ikut flow header */
+  background: #3399ff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.3rem;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+#music-toggle:hover {
+  background: #2673cc;
+}
+
+.photo-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.photo-scroll img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  border: 2px solid #ccc;
+  transition: transform 0.2s;
+}
+
+.photo-scroll img:hover {
+  transform: scale(1.05);
+  border-color: #3399ff;
+}
+
+/* --- Emotikon Terbang Lucu --- */
+.floating-emoji {
+  position: absolute;
+  font-size: 30px;
+  pointer-events: none;
+  animation: floatEmoji 3.5s ease-out forwards; /* durasi lebih lama */
+  z-index: 999;
+}
+
+@keyframes floatEmoji {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) scale(1.8);
+  }
+}
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Birthday Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Tambahan style buat emoji terbang */
+    .floating-emoji {
+      position: absolute;
+      font-size: 2rem;
+      pointer-events: none;
+      animation: floatMove 3.5s forwards;
+      user-select: none;
+      z-index: 1000;
+      opacity: 0.9;
+    }
+
+    @keyframes floatMove {
+      to {
+        transform: translate(var(--x), var(--y));
+        opacity: 0;
+      }
+    }
+
+    /* Styling header dengan flex supaya tombol musik di kanan atas */
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #e0f0ff;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .header-left h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #0047ab;
+    }
+
+    .header-left p {
+      margin: 0;
+      font-size: 14px;
+      color: #336699;
+    }
+
+    /* Styling tombol musik di header */
+    #music-toggle {
+      background: #3399ff;
+      border: none;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.3rem;
+      user-select: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+
+    #music-toggle:hover {
+      background: #2673cc;
+    }
+  </style>
+</head>
+<body class="birthday-page">
+
+  <!-- Banner Container -->
+  <div class="banner-container">
+
+    <!-- Header di pojok kiri dan tombol musik di kanan -->
+    <header class="header-top">
+      <div class="header-left">
+        <h1>HAPPY BIRTHDAY!</h1>
+        <p>made by ur gf</p>
+      </div>
+      <button id="music-toggle" title="Play/Pause Music">🔈</button>
+    </header>
+
+    <!-- Banner Content -->
+    <div class="banner">
+      <!-- Gambar -->
+      <img src="images/Happy_Birthday.jpg" alt="Banner" class="banner-img" />
+
+      <!-- Ucapan -->
+      <div class="banner-text">
+        <h2>hello, cayangku❤️! happy twenty</h2>
+        <p>Wishing you endless happiness, success, and love today and always. So grateful to have you by my side!</p>
+      </div>
+
+      <!-- Konten Navigasi + Dinamis -->
+      <div class="interactive-section">
+        <nav>
+          <button onclick="showSection('profile')">Profile</button>
+          <button onclick="showSection('twenty')">Twenty</button>
+          <button onclick="showSection('readme')">Read Me</button>
+        </nav>
+
+        <div id="profile" class="section">
+          <h3>Our Memories 📸</h3>
+          <div class="photo-scroll">
+            <img src="images/foto1.jpeg" alt="Moment 1" />
+            <img src="images/foto2.jpeg" alt="Moment 2" />
+            <img src="images/foto3.jpeg" alt="Moment 3" />
+            <img src="images/foto4.jpeg" alt="Moment 4" />
+            <img src="images/foto5.jpeg" alt="Moment 5" />
+            <img src="images/foto6.jpeg" alt="Moment 6" />
+            <img src="images/foto7.jpeg" alt="Moment 7" />
+            <img src="images/foto8.jpeg" alt="Moment 8" />
+            <img src="images/foto9.jpeg" alt="Moment 9" />
+            <img src="images/foto10.jpeg" alt="Moment 10" />
+          </div>
+        </div>
+
+        <div id="twenty" class="section" style="display:none;">
+          <h3>Last & Forever</h3>
+          <div id="countdown"></div>
+        </div>
+
+        <div id="readme" class="section" style="display:none;">
+          <p><strong>Celamat ulang tahun cayang!! ❤️🥳</strong><br>
+Udah kepala dua nich... selamat datang di klub “capek tapi harus tetep jalan” 💀✨<br><br>
+
+Tetap semangat terus ya beib, sehat-sehat terus ya dede, 
+umur nambah, isi kepala juga nambah,bukan isi keranjang belanja doang<br>
+Semoga makin sabar dan sabar tetap senyum jangan suka cemberut makin cepat tuek yang ada (hehe cabal2 ya dede sama yg bawel minta ampun ini),<br>
+makin melimpah rejekinya, dan makin sayang aku,apapun la itu obviously ❤️<br><br>
+
+umur menuak, jangan bandel ya, istirahat nya yg cukup, makan juga harus teratur,sama kurang2in malah2 nya wlek.<br>
+dedek udah keyen, sangat suka dengan dede karna dede udah sangat baik dan perfect bagi i, udah melebihi dari bpk i, 
+karna dedek rela buang waktu jauh2 demi mama (sbnernya sih itu dedek nya aja yg kwatir tak jls), 
+trus dede suka kasih banyak hal ke mama (dan mama belum bisaa), then banyaklah samapai tak tersebut tapi dedek cangat baik, 
+nda ada hal yang buat mama tak suka (paling cuman susah dibilng, sama suka emosinya aja) tapi mama terimaaci banget cama dedek 
+klo kepanjangan gweh sedih yg ada:v.<br><br>
+
+Terima kasih udah jadi tempat paling nyaman buat mama❤️ (walau nyebelin minta ampun).<br>
+Semoga kita bisa terus tumbuh bareng, dari twenty ke thirty, sampe ubanan nanti 
+Pokoknya dedek harus sehat selalu ya nda bole nyerah😌<br><br>
+
+<em>love dede yang sangat amat banyak-banyak cekali❤️❤️❤️,</em><br>
+<strong>— your gf 💅</strong>
+</p>
+
+        </div>
+      </div>
+
+      <footer>
+        <button onclick="window.location.href='index.html'">Close</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Musik -->
+  <audio id="bg-music" src="audio/happy_birthday.mp3" loop autoplay></audio>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+
+      // Jika klik "Twenty", munculkan emoji
+      if (id === 'twenty') {
+        for (let i = 0; i < 40; i++) {
+          setTimeout(spawnEmoji, i * 100); // munculkan tiap 100ms
+        }
+      }
+    }
+
+    // Fungsi munculin emoji terbang dari berbagai arah
+    function spawnEmoji() {
+      const emojiList = ['🎉', '🎂', '💖', '✨', '🥳', '🎁'];
+      const emoji = document.createElement('div');
+      emoji.classList.add('floating-emoji');
+      emoji.textContent = emojiList[Math.floor(Math.random() * emojiList.length)];
+
+      const container = document.querySelector('.banner-container');
+      container.appendChild(emoji);
+
+      const containerWidth = container.offsetWidth;
+      const containerHeight = container.offsetHeight;
+
+      // Dari mana emoji datang: top, bottom, left, right
+      const direction = ['top', 'bottom', 'left', 'right'][Math.floor(Math.random() * 4)];
+
+      let startX, startY;
+      switch (direction) {
+        case 'top':
+          startX = Math.random() * containerWidth;
+          startY = -30;
+          emoji.style.setProperty('--x', `${(Math.random() - 0.5) * 200}px`);
+          emoji.style.setProperty('--y', '300px');
+          break;
+        case 'bottom':
+          startX = Math.random() * containerWidth;
+          startY = containerHeight + 30;
+          emoji.style.setProperty('--x', `${(Math.random() - 0.5) * 200}px`);
+          emoji.style.setProperty('--y', '-300px');
+          break;
+        case 'left':
+          startX = -30;
+          startY = Math.random() * containerHeight;
+          emoji.style.setProperty('--x', '300px');
+          emoji.style.setProperty('--y', `${(Math.random() - 0.5) * 200}px`);
+          break;
+        case 'right':
+          startX = containerWidth + 30;
+          startY = Math.random() * containerHeight;
+          emoji.style.setProperty('--x', '-300px');
+          emoji.style.setProperty('--y', `${(Math.random() - 0.5) * 200}px`);
+          break;
+      }
+
+      emoji.style.left = `${startX}px`;
+      emoji.style.top = `${startY}px`;
+
+      // Hapus setelah animasi selesai
+      setTimeout(() => {
+        emoji.remove();
+      }, 3500);
+    }
+
+    // Countdown
+    const countdown = document.getElementById("countdown");
+    const targetDate = new Date("2025-09-19 00:00:00").getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdown.innerHTML = `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+    }, 1000);
+
+    // Musik: play otomatis dan toggle
+    const music = document.getElementById("bg-music");
+    const musicToggle = document.getElementById("music-toggle");
+
+    window.addEventListener("load", () => {
+      music.play().catch(() => {
+        musicToggle.textContent = '▶️ Play Music';
+      });
+    });
+
+    musicToggle.addEventListener("click", () => {
+      if (music.paused) {
+        music.play();
+        musicToggle.textContent = '🔈 Music On/Off';
+      } else {
+        music.pause();
+        musicToggle.textContent = '🔇 Music Off';
+      }
+    });
+  </script>
+</body>
+</html>
+/* Responsif untuk layar HP */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    flex-direction: column; /* dari horizontal ke vertikal */
+    padding: 20px;
+    gap: 20px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .image-section img {
+    max-width: 150px;
+    width: 80vw; /* maksimal 80% viewport width */
+    height: auto;
+  }
+
+  .lock-section {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #pin {
+    width: 80vw;
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .keypad {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 80vw;
+  }
+
+  .keypad button {
+    font-size: 18px;
+    padding: 12px 0;
+  }
+}

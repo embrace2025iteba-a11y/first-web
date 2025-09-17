@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Birthday Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Tambahan style buat emoji terbang */
+    .floating-emoji {
+      position: absolute;
+      font-size: 2rem;
+      pointer-events: none;
+      animation: floatMove 3.5s forwards;
+      user-select: none;
+      z-index: 1000;
+      opacity: 0.9;
+    }
+
+    @keyframes floatMove {
+      to {
+        transform: translate(var(--x), var(--y));
+        opacity: 0;
+      }
+    }
+
+    /* Styling header dengan flex supaya tombol musik di kanan atas */
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #e0f0ff;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .header-left h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #0047ab;
+    }
+
+    .header-left p {
+      margin: 0;
+      font-size: 14px;
+      color: #336699;
+    }
+
+    /* Styling tombol musik di header */
+    #music-toggle {
+      background: #3399ff;
+      border: none;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.3rem;
+      user-select: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+
+    #music-toggle:hover {
+      background: #2673cc;
+    }
+  </style>
+</head>
+<body class="birthday-page">
+
+  <!-- Banner Container -->
+  <div class="banner-container">
+
+    <!-- Header di pojok kiri dan tombol musik di kanan -->
+    <header class="header-top">
+      <div class="header-left">
+        <h1>HAPPY BIRTHDAY!</h1>
+        <p>made by ur gf</p>
+      </div>
+      <button id="music-toggle" title="Play/Pause Music">🔈</button>
+    </header>
+
+    <!-- Banner Content -->
+    <div class="banner">
+      <!-- Gambar -->
+      <img src="images/Happy_Birthday.jpg" alt="Banner" class="banner-img" />
+
+      <!-- Ucapan -->
+      <div class="banner-text">
+        <h2>hello, cayangku❤️! happy twenty</h2>
+        <p>Wishing you endless happiness, success, and love today and always. So grateful to have you by my side!</p>
+      </div>
+
+      <!-- Konten Navigasi + Dinamis -->
+      <div class="interactive-section">
+        <nav>
+          <button onclick="showSection('profile')">Profile</button>
+          <button onclick="showSection('twenty')">Twenty</button>
+          <button onclick="showSection('readme')">Read Me</button>
+        </nav>
+
+        <div id="profile" class="section">
+          <h3>Our Memories 📸</h3>
+          <div class="photo-scroll">
+            <img src="images/foto1.jpeg" alt="Moment 1" />
+            <img src="images/foto2.jpeg" alt="Moment 2" />
+            <img src="images/foto3.jpeg" alt="Moment 3" />
+            <img src="images/foto4.jpeg" alt="Moment 4" />
+            <img src="images/foto5.jpeg" alt="Moment 5" />
+            <img src="images/foto6.jpeg" alt="Moment 6" />
+            <img src="images/foto7.jpeg" alt="Moment 7" />
+            <img src="images/foto8.jpeg" alt="Moment 8" />
+            <img src="images/foto9.jpeg" alt="Moment 9" />
+            <img src="images/foto10.jpeg" alt="Moment 10" />
+          </div>
+        </div>
+
+        <div id="twenty" class="section" style="display:none;">
+          <h3>Last & Forever</h3>
+          <div id="countdown"></div>
+        </div>
+
+        <div id="readme" class="section" style="display:none;">
+          <p><strong>Celamat ulang tahun cayang!! ❤️🥳</strong><br>
+Udah kepala dua nich... selamat datang di klub “capek tapi harus tetep jalan” 💀✨<br><br>
+
+Tetap semangat terus ya beib, sehat-sehat terus ya dede, 
+umur nambah, isi kepala juga nambah,bukan isi keranjang belanja doang<br>
+Semoga makin sabar dan sabar tetap senyum jangan suka cemberut makin cepat tuek yang ada (hehe cabal2 ya dede sama yg bawel minta ampun ini),<br>
+makin melimpah rejekinya, dan makin sayang aku,apapun la itu obviously ❤️<br><br>
+
+umur menuak, jangan bandel ya, istirahat nya yg cukup, makan juga harus teratur,sama kurang2in malah2 nya wlek.<br>
+dedek udah keyen, sangat suka dengan dede karna dede udah sangat baik dan perfect bagi i, udah melebihi dari bpk i, 
+karna dedek rela buang waktu jauh2 demi mama (sbnernya sih itu dedek nya aja yg kwatir tak jls), 
+trus dede suka kasih banyak hal ke mama (dan mama belum bisaa), then banyaklah samapai tak tersebut tapi dedek cangat baik, 
+nda ada hal yang buat mama tak suka (paling cuman susah dibilng, sama suka emosinya aja) tapi mama terimaaci banget cama dedek 
+klo kepanjangan gweh sedih yg ada:v.<br><br>
+
+Terima kasih udah jadi tempat paling nyaman buat mama❤️ (walau nyebelin minta ampun).<br>
+Semoga kita bisa terus tumbuh bareng, dari twenty ke thirty, sampe ubanan nanti 
+Pokoknya dedek harus sehat selalu ya nda bole nyerah😌<br><br>
+
+<em>love dede yang sangat amat banyak-banyak cekali❤️❤️❤️,</em><br>
+<strong>— your gf 💅</strong>
+</p>
+
+        </div>
+      </div>
+
+      <footer>
+        <button onclick="window.location.href='index.html'">Close</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Musik -->
+  <audio id="bg-music" src="audio/happy_birthday.mp3" loop autoplay></audio>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+
+      // Jika klik "Twenty", munculkan emoji
+      if (id === 'twenty') {
+        for (let i = 0; i < 40; i++) {
+          setTimeout(spawnEmoji, i * 100); // munculkan tiap 100ms
+        }
+      }
+    }
+
+    // Fungsi munculin emoji terbang dari berbagai arah
+    function spawnEmoji() {
+      const emojiList = ['🎉', '🎂', '💖', '✨', '🥳', '🎁'];
+      const emoji = document.createElement('div');
+      emoji.classList.add('floating-emoji');
+      emoji.textContent = emojiList[Math.floor(Math.random() * emojiList.length)];
+
+      const container = document.querySelector('.banner-container');
+      container.appendChild(emoji);
+
+      const containerWidth = container.offsetWidth;
+      const containerHeight = container.offsetHeight;
+
+      // Dari mana emoji datang: top, bottom, left, right
+      const direction = ['top', 'bottom', 'left', 'right'][Math.floor(Math.random() * 4)];
+
+      let startX, startY;
+      switch (direction) {
+        case 'top':
+          startX = Math.random() * containerWidth;
+          startY = -30;
+          emoji.style.setProperty('--x', `${(Math.random() - 0.5) * 200}px`);
+          emoji.style.setProperty('--y', '300px');
+          break;
+        case 'bottom':
+          startX = Math.random() * containerWidth;
+          startY = containerHeight + 30;
+          emoji.style.setProperty('--x', `${(Math.random() - 0.5) * 200}px`);
+          emoji.style.setProperty('--y', '-300px');
+          break;
+        case 'left':
+          startX = -30;
+          startY = Math.random() * containerHeight;
+          emoji.style.setProperty('--x', '300px');
+          emoji.style.setProperty('--y', `${(Math.random() - 0.5) * 200}px`);
+          break;
+        case 'right':
+          startX = containerWidth + 30;
+          startY = Math.random() * containerHeight;
+          emoji.style.setProperty('--x', '-300px');
+          emoji.style.setProperty('--y', `${(Math.random() - 0.5) * 200}px`);
+          break;
+      }
+
+      emoji.style.left = `${startX}px`;
+      emoji.style.top = `${startY}px`;
+
+      // Hapus setelah animasi selesai
+      setTimeout(() => {
+        emoji.remove();
+      }, 3500);
+    }
+
+    // Countdown
+    const countdown = document.getElementById("countdown");
+    const targetDate = new Date("2025-09-19 00:00:00").getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdown.innerHTML = `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+    }, 1000);
+
+    // Musik: play otomatis dan toggle
+    const music = document.getElementById("bg-music");
+    const musicToggle = document.getElementById("music-toggle");
+
+    window.addEventListener("load", () => {
+      music.play().catch(() => {
+        musicToggle.textContent = '▶️ Play Music';
+      });
+    });
+
+    musicToggle.addEventListener("click", () => {
+      if (music.paused) {
+        music.play();
+        musicToggle.textContent = '🔈 Music On/Off';
+      } else {
+        music.pause();
+        musicToggle.textContent = '🔇 Music Off';
+      }
+    });
+  </script>
+</body>
+</html>

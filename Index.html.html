@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lock Screen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Gambar kiri -->
+    <div class="image-section">
+      <img src="images/Happy_Birthday.jpg" alt="Happy Birthday">
+    </div>
+
+    <!-- Keypad kanan -->
+    <div class="lock-section">
+      <input type="password" id="pin" placeholder="••••" disabled>
+      <div class="keypad">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>*</button>
+        <button>0</button>
+        <button>#</button>
+      </div>
+      <p id="message"></p>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll(".keypad button");
+    const pinInput = document.getElementById("pin");
+    const message = document.getElementById("message");
+
+    let enteredPin = "";
+    const correctPin = "12345"; // PIN benar
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const value = button.textContent;
+
+        if (value === "*" || value === "#") {
+          // Reset PIN
+          enteredPin = "";
+          pinInput.value = "";
+          message.textContent = "PIN direset";
+        } else {
+          if (enteredPin.length < 4) {
+            enteredPin += value;
+            pinInput.value = "*".repeat(enteredPin.length);
+          }
+
+          if (enteredPin.length === 4) {
+            if (enteredPin === correctPin) {
+              message.textContent = "✅ PIN benar! Akses diterima.";
+              message.style.color = "green";
+              // Delay 1 detik, lalu ke halaman kedua
+              setTimeout(() => {
+                window.location.href = "birthday.html";
+              }, 1000);
+            } else {
+              message.textContent = "❌ PIN salah, coba lagi.";
+              message.style.color = "red";
+              enteredPin = "";
+              pinInput.value = "";
+            }
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
